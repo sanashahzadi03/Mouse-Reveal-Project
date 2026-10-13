@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova Glass — Digital Designer & Experience Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Michroma&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="progress" id="progress"></div>
+
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">NOVA GLASS</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#story">Process</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+
+  <section class="hero" id="hero">
+
+    <!-- Right side: image stage (both images stacked) -->
+    <div class="stage" id="stage">
+      <!-- Bottom layer: normal image (eyes closed) -->
+      <img class="layer layer-normal" src="/normal.png" alt="Silver-haired girl in glass suit" draggable="false" />
+
+      <!-- Top layer: reveal image (glasses on), visible only inside circle -->
+      <div class="layer layer-reveal" id="reveal">
+        <img src="/reveal.png" alt="Silver-haired girl wearing glass visor" draggable="false" />
+      </div>
+
+      <!-- Glass ring that follows the cursor -->
+      <div class="ring" id="ring"></div>
+    </div>
+
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+          <path d="M3 23V3l20 20V3" stroke="#1b2a41" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M13 3l10 10" stroke="#3fb6ff" stroke-width="2.4"/>
+        </svg>
+        <span>NOVA GLASS</span>
+      </div>
+      <div class="status"><i></i> AVAILABLE FOR FREELANCE</div>
+    </header>
+
+    <!-- Content -->
+    <div class="content">
+      <h1 class="title">
+        <span class="line"><span class="line-inner">NOVA</span></span>
+        <span class="line"><span class="line-inner">GLASS</span></span>
+      </h1>
+
+      <h2 class="role">Digital Designer &amp; Experience Architect</h2>
+      <p class="desc">I design futuristic interfaces and digital experiences that blend clarity, functionality, and innovation.</p>
+
+      <div class="actions">
+        <a href="#work" class="btn btn-primary">VIEW WORK <span>↓</span></a>
+        <a href="#cv" class="btn btn-ghost">DOWNLOAD CV <span>⤓</span></a>
+      </div>
+    </div>
+
+
+
+    <!-- Rotating badge -->
+    <div class="badge">
+      <svg viewBox="0 0 120 120" class="badge-text">
+        <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+        <text><textPath href="#circ">· BEYOND THE FUTURE · PIXEL SHOUT · BEYOND THE FUTURE ·</textPath></text>
+      </svg>
+      
+    </div>
+
+    <div class="hint">HOVER · TOUCH · EXPLORE</div>
+  </section>
+
+    <!-- ============ FEATURED CASE STUDIES ============ -->
+  <section class="cases" id="work">
+    <div class="cases-panel">
+
+      <div class="cases-head">
+        <div class="cases-label"><i></i> FEATURED CASE STUDIES</div>
+        <a href="#" class="cases-next" aria-label="View all projects">→</a>
+      </div>
+
+      <div class="cases-grid">
+
+        <!-- Card 01 -->
+        <article class="case-card">
+          <div class="thumb" tabindex="0" role="button" aria-label="Open Stellar Command image">
+            <img src="https://i.pinimg.com/1200x/15/af/e5/15afe59c359a7b85a29a1968a5eca95e.jpg" alt="Stellar Command" onerror="this.style.display='none'" />
+            <span class="num">01</span>
+            <span class="zoom">⤢</span>
+          </div>
+          <h3 class="case-title">Aero Vision</h3>
+          <p class="case-desc">Immersive mixed-reality headset experience with spatial controls.</p>
+          <div class="tags"><span>AR / VR Design</span><span>Dashboard</span></div>
+        </article>
+
+        <!-- Card 02 -->
+        <article class="case-card">
+          <div class="thumb" tabindex="0" role="button" aria-label="Open Quantum Drive image">
+            <img src="https://i.pinimg.com/1200x/b7/e4/e2/b7e4e21b2ce30f12e7ca19d4703e9551.jpg" alt="Quantum Drive" onerror="this.style.display='none'" />
+            <span class="num">02</span>
+            <span class="zoom">⤢</span>
+          </div>
+          <h3 class="case-title">Amber Lens</h3>
+          <p class="case-desc">Bold campaign website for a next-gen wearable visor brand.</p>
+          <div class="tags"><span>Branding</span><span>Web Design</span></div>
+        </article>
+
+        <!-- Card 03 -->
+        <article class="case-card">
+          <div class="thumb" tabindex="0" role="button" aria-label="Open Zenith App image">
+            <img src="https://i.pinimg.com/1200x/35/b5/81/35b581109dabc0ae3c9c70c26ed9e131.jpg" alt="Zenith App" onerror="this.style.display='none'" />
+            <span class="num">03</span>
+            <span class="zoom">⤢</span>
+          </div>
+          <h3 class="case-title">Echo Studio</h3>
+          <p class="case-desc">Product landing page for premium wireless headphones.</p>
+          <div class="tags"><span>Product Page</span><span>Motion UI</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Image popup (lightbox) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lb-backdrop" id="lbBackdrop"></div>
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <figure class="lb-figure">
+      <div class="lb-media" id="lbMedia"><img id="lbImg" alt="" /></div>
+      <figcaption class="lb-caption"><b id="lbTitle"></b><span id="lbDesc"></span></figcaption>
+    </figure>
+  </div>
+
+    <!-- ============ STORY (pinned scroll animation) ============ -->
+  <section class="story" id="story">
+
+    <!-- 1. opening image + scaled text -->
+    <div class="rs-initial">
+      <div class="rs-initial-text"><h1>Beyond The Screen</h1></div>
+      <div class="rs-media">
+      <img src="https://i.pinimg.com/1200x/d2/45/1d/d2451db50bd4dbc5c72de6445863e87c.jpg" alt="" onerror="this.style.display='none'" />
+      </div>
+    </div>
+
+    <!-- 2. three strips (one wide image split in 3) -->
+    <div class="rs-strips">
+      <div class="rs-strip rs-strip-1"></div>
+      <div class="rs-strip rs-strip-2"></div>
+      <div class="rs-strip rs-strip-3"></div>
+    </div>
+
+    <!-- 3. cards sliding across -->
+    <div class="rs-cards">
+      <div class="rs-card">
+        <img src="https://i.pinimg.com/736x/c3/25/de/c325deef601f2d3025fa6875d9ea6417.jpg" alt="" onerror="this.style.display='none'" />
+        <div class="rs-card-info"><span>01</span><h3>Discover</h3><p>Bold ideas and fresh references before a single pixel.</p></div>
+      </div>
+      <div class="rs-card">
+        <img src="https://i.pinimg.com/736x/58/be/ab/58beab30dd0e3611031df97dca64f1f3.jpg" alt="" onerror="this.style.display='none'" />
+        <div class="rs-card-info"><span>02</span><h3>Design</h3><p>Glowing glass interfaces, crafted with futuristic detail.</p></div>
+      </div>
+      <div class="rs-card">
+        <img src="https://i.pinimg.com/736x/0e/de/41/0ede4188f6e27bfda4288e43e59503de.jpg" alt="" onerror="this.style.display='none'" />
+        <div class="rs-card-info"><span>03</span><h3>Deliver</h3><p>Polished products launched with style and confidence.</p></div>
+      </div>
+    </div>
+
+    <!-- 4. final image + text -->
+    <div class="rs-final">
+      <div class="rs-final-media">
+        <img src="images/story-3.jpg" alt="" onerror="this.style.display='none'" />
+      </div>
+      <div class="rs-final-text">
+        <h2>Let's Build Tomorrow</h2>
+        <p>Have a project in mind? Let's turn it into something unforgettable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ORBIT GALLERY ============ -->
+  <section class="orbit" id="gallery">
+    <div class="orbit-label">EXPLORATIONS</div>
+
+    <div class="orbit-items">
+      <div class="orbit-item"><img src="https://i.pinimg.com/736x/18/fc/a9/18fca964b870c8f893237b26bc3e9569.jpg" alt="" onerror="this.style.display='none'" /><span>UI Concepts</span></div>
+      <div class="orbit-item"><img src="https://i.pinimg.com/1200x/3a/d8/3f/3ad83fa3e5dee5bcaed7c04c68921edc.jpg" alt="" onerror="this.style.display='none'" /><span>Glass 3D</span></div>
+      <div class="orbit-item"><img src="https://i.pinimg.com/736x/1d/7b/fa/1d7bfa3965ac2e990be566121172730f.jpg" alt="" onerror="this.style.display='none'" /><span>Branding</span></div>
+      <div class="orbit-item"><img src="https://i.pinimg.com/736x/4d/38/b9/4d38b9212f018f40d8a70a08583f23e8.jpg" alt="" onerror="this.style.display='none'" /><span>Mobile App</span></div>
+      <div class="orbit-item"><img src="https://i.pinimg.com/736x/f5/95/27/f5952706fb8371afadf4b1a4ff6d3ff7.jpg" alt="" onerror="this.style.display='none'" /><span>Dashboard</span></div>
+      <div class="orbit-item"><img src="https://i.pinimg.com/1200x/07/75/45/0775451523cdc579fe2bb33762af2c95.jpg" alt="" onerror="this.style.display='none'" /><span>Motion</span></div>
+      <div class="orbit-item"><img src="https://i.pinimg.com/736x/f6/37/6d/f6376d40fb849d764db0e9424fbf11ad.jpg" alt="" onerror="this.style.display='none'" /><span>Poster</span></div>
+      <div class="orbit-item"><img src="https://i.pinimg.com/736x/01/aa/45/01aa454bb697d5ef1193eda12c1345a9.jpg" alt="" onerror="this.style.display='none'" /><span>Wearables</span></div>
+      <div class="orbit-item"><img src="https://i.pinimg.com/736x/0b/f7/79/0bf7798ca7be0953a6eb614eb2432f52.jpg" alt="" onerror="this.style.display='none'" /><span>Typography</span></div>
+    </div>
+
+    <div class="orbit-controls">
+      <button class="orbit-prev" aria-label="Previous">←</button>
+      <button class="orbit-next" aria-label="Next">→</button>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="ft-card">
+
+      <div class="ft-top">
+        <div class="ft-left">
+          <h4>Design Different ™</h4>
+          <form class="ft-form">
+            <input type="email" placeholder="email@gmail.com" aria-label="Your email" />
+            <button type="submit" class="ft-btn">Get in touch</button>
+          </form>
+         <div class="ft-social">
+  <a href="#" data-social="instagram" aria-label="Instagram">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+  </a>
+  <a href="#" data-social="linkedin" aria-label="LinkedIn">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.5h4V21H3V9.5zm7 0h3.8v1.6h.06c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.32-1.96 2.69V21h-4V9.5z"/></svg>
+  </a>
+  <a href="#" data-social="email" aria-label="Email">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+  </a>
+</div>
+        </div>
+
+        <div class="ft-col">
+          <h5>Work</h5>
+          <a href="#work">Case Studies</a>
+          <a href="#gallery">Explorations</a>
+          <a href="#story">Process</a>
+        </div>
+
+        <div class="ft-col">
+          <h5>Services</h5>
+          <a href="#">UI/UX Design</a>
+          <a href="#">Web Design</a>
+          <a href="#">Mobile Apps</a>
+        </div>
+
+        <div class="ft-col">
+          <h5>Contact</h5>
+          <a href="#">About me</a>
+          <a href="#">Hire me</a>
+          <a href="#">Say hello</a>
+        </div>
+      </div>
+
+      <h2 class="ft-word" aria-label="novaglass">
+        <span>n</span><span>o</span><span>v</span><span>a</span><span>g</span><span>l</span><span>a</span><span>s</span><span>s</span>
+      </h2>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
